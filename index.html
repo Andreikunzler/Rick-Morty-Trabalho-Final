@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick Morty</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./assets/rick-and-morty.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <section id="containerInput">
+            <h1>API de Rick and Morty</h1>
+            <div class="containerFilter">
+                <input id="filter" type="text" placeholder="Pesquisa">
+                <img id="imgPesquisa" src="./imagens/lupa.svg" alt="Lupa de pesquisa">
+            </div>
+        </section>
+    </header>
+    <main id="container"></main>
+    <section id="containerPages">
+        <button id="prevPage" class="buttonBackPage" onclick="getPreviousPage()">Anterior</button>
+        <span id="pages">
+        </span>
+        <button id="nextPage" onclick="getNextPage()">Próxima</button>
+    </section>
+    <footer>
+        <img src="./imagens/rick-and-morty.png" alt="Imagem de Rick e Morty">
+        <div>
+            <section id="infoApi">
+                <p>PERSONAGENS: <span data-count-characters="">0</span></p>
+                <p>LOCALIZAÇÕES: <span data-count-locations>0</span></p>
+                <p>EPISÓDIOS: <span data-count-episodes>0</span></p>
+            </section>
+            <section id="infoDeveloper">
+                <p>Desenvolvido por: <b>ANDREI HENRIQUE KUNZLER</b> em 2023</p>
+            </section>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+
+</body>
+</html>
