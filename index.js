@@ -127,12 +127,12 @@ async function dataGetCount(data) {
     return res[data].info.count;
 }
 
-async function apienpointsinfoPrintAmount() {
+async function infoFooter() {
   charactersCountElement.textContent = await dataGetCount('characters');
   locationsCountElement.textContent = await dataGetCount('locations');
   episodesCountElement.textContent = await dataGetCount('episodes');
 }
-
+infoFooter()
 let pageContext = {
   currentPage: 1,
   totalPages: 0,
